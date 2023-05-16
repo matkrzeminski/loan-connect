@@ -7,3 +7,8 @@ $ cp .env.example .env
 ```
 $ docker-compose up --build -d
 ```
+#### Install pre-commit hooks.
+Please run the following command to do so:
+```
+$ pre-commit install
+```
