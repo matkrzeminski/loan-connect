@@ -3,7 +3,8 @@ import sys
 from logging.config import fileConfig
 
 from alembic import context
-from app.db.models import Base, engine
+from app.db.config import engine
+from app.db.models import Base
 from sqlalchemy import engine_from_config, pool
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
