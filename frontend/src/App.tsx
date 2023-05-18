@@ -6,10 +6,10 @@ import RegisterPage from "./components/pages/RegisterPage";
 function App(): JSX.Element {
   return (
     <div className="App">
-      <RegisterPage />
-      {/* <BaseLayout>
+      {/* <RegisterPage /> */}
+      <BaseLayout>
         <List />
-      </BaseLayout> */}
+      </BaseLayout>
     </div>
   );
 }

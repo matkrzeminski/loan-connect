@@ -79,7 +79,7 @@ const RegisterPage = () => {
                   id="email"
                   name="email"
                   placeholder="Enter your email"
-                  className="border border-gray-300 px-4 py-2 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="border border-gray-300 px-4 py-2 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-indigo-600"
                 />
                 <ErrorMessage
                   name="email"
@@ -101,7 +101,7 @@ const RegisterPage = () => {
                     id="password"
                     name="password"
                     placeholder="Enter your password"
-                    className="border border-gray-300 px-4 py-2 pr-20 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="border border-gray-300 px-4 py-2 pr-20 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-indigo-600"
                   />
                   <button
                     type="button"
@@ -116,7 +116,7 @@ const RegisterPage = () => {
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"
                         fill="currentColor"
-                        className="w-6 h-6 hover:text-gray-700 focus:outline-none"
+                        className="w-6 h-6 text-indigo-600"
                       >
                         <path
                           fillRule="evenodd"
@@ -177,19 +177,19 @@ const RegisterPage = () => {
                     id="confirmPassword"
                     name="confirmPassword"
                     placeholder="Confirm your password"
-                    className="border border-gray-300 px-4 py-2 pr-20 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="border border-gray-300 px-4 py-2 pr-20 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-indigo-600"
                   />
                   <button
                     type="button"
                     onClick={handleToggleConfirmPassword}
-                    className="absolute top-1/2 right-4 transform -translate-y-1/2 text-gray-500 hover:text-gray-700 focus:outline-none flex space-x-1"
+                    className="absolute top-1/2 right-4 transform -translate-y-1/2 text-gray-500  flex space-x-1"
                   >
                     <div className="tooltip" data-tip="Confirm your password">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"
                         fill="currentColor"
-                        className="w-6 h-6"
+                        className="w-6 h-6 text-indigo-600"
                       >
                         <path
                           fillRule="evenodd"
@@ -239,7 +239,7 @@ const RegisterPage = () => {
 
               <button
                 type="submit"
-                className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
+                className="bg-indigo-600 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
               >
                 Submit
               </button>
