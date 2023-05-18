@@ -8,7 +8,11 @@ const validationSchema = Yup.object().shape({
   email: Yup.string().email("Invalid email").required("Email is required"),
   password: Yup.string()
     .required("Password is required")
-    .min(6, "Password must be at least 6 characters"),
+    .min(8, "Password must be at least 8 characters")
+    .matches(
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]+$/,
+      "Password must contain at least one uppercase letter, one lowercase letter, one digit, and one special character"
+    ),
   confirmPassword: Yup.string()
     .oneOf([Yup.ref("password")], "Passwords must match")
     .required("Confirm Password is required"),
@@ -34,9 +38,13 @@ const RegisterPage = () => {
           src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
           alt="Your Company"
         />
-        <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
+        <h1 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
+          Loan Connect
+        </h1>
+
+        <h3 className="mt-10 text-center text-xl font-bold leading-9 tracking-tight text-gray-900">
           Create an account
-        </h2>
+        </h3>
       </div>
       <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
         <Formik
@@ -46,8 +54,9 @@ const RegisterPage = () => {
             confirmPassword: "",
           }}
           validationSchema={validationSchema}
+          validateOnChange={false}
+          validateOnBlur={false}
           onSubmit={(values) => {
-            // Przetwarzanie danych formularza
             console.log(values);
           }}
         >
