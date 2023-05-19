@@ -2,6 +2,7 @@
   "name": "vite-reactts-tailwind-rtk-eslint",
   "version": "0.0.0",
   "scripts": {
+    "dev1": "vite --host",
     "dev": "vite",
     "build": "tsc && vite build",
     "serve": "vite preview",
