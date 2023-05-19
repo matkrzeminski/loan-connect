@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import React from "react";
+import Logo from "../../../public/images/loan-connect-logo.png";
 
 const validationSchema = Yup.object().shape({
   email: Yup.string().email("Invalid email").required("Email is required"),
@@ -39,9 +40,9 @@ const RegisterPage = () => {
     <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-sm">
         <img
-          className="mx-auto h-10 w-auto"
-          src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-          alt="Your Company"
+          className="mx-auto h-20 w-auto"
+          src={Logo}
+          alt="loan connect logo"
         />
         <h1 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
           Loan Connect
