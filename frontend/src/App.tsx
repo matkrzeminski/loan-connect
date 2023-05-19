@@ -1,7 +1,5 @@
 import React from "react";
-
-import { Routes, Route } from "react-router-dom";
-
+import { useLocation, Routes, Route } from "react-router-dom";
 import BaseLayout from "./components/organisms/BaseLayout";
 import List from "./components/molecules/List";
 import RegisterPage from "./components/pages/RegisterPage";
@@ -10,9 +8,11 @@ import LoginPage from "./components/pages/LoginPage";
 import NoPageFound from "./components/molecules/NoPageFound";
 
 function App(): JSX.Element {
+  const location = useLocation();
+
   return (
     <div className="App">
-      <BaseLayout>
+      <BaseLayout currentLocation={location.pathname}>
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/loans-list" element={<List />} />
