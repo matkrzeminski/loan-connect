@@ -9,10 +9,10 @@ function App(): JSX.Element {
   return (
     <div className="App">
       <BaseLayout>
-        {/* <LandingPage /> */}
+        <LandingPage />
         {/* <List /> */}
         {/* <RegisterPage /> */}
-        <LoginPage />
+        {/* <LoginPage /> */}
       </BaseLayout>
     </div>
   );
