@@ -28,10 +28,10 @@ export default function LandingPage() {
           traditional financial institutions.
         </p>
         <div className="flex justify-center mb-10">
-          <button className="bg-green-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg mr-4">
+          <button className="bg-green-500 text-white hover:bg-white hover:text-gray-800 font-bold py-3 px-6 rounded-lg mr-4">
             Create Account now
           </button>
-          <button className="bg-gray-800 50border-2 border-white text-white font-bold py-3 px-6 rounded-lg hover:bg-white hover:text-blue-500">
+          <button className="bg-gray-800 50border-2 border-white text-white font-bold py-3 px-6 rounded-lg hover:bg-white hover:text-gray-800">
             Log into your account
           </button>
         </div>
@@ -46,7 +46,7 @@ export default function LandingPage() {
             platform offers a secure and transparent way to fulfill your
             financial goals.
           </p>
-          <h2 className="text-2xl font-bold mb-4">How It Works</h2>
+          <h2 className="text-2xl font-bold mb-4">How It Works?</h2>
           <p className="text-lg mb-8">
             Borrowers can create loan listings outlining their borrowing needs,
             and investors can browse and choose loan listings to fund. The
