@@ -7,9 +7,7 @@ function App(): JSX.Element {
   return (
     <div className="App">
       <BaseLayout>
-        <RegisterPage />
-
-        {/* <List /> */}
+        <List />
       </BaseLayout>
     </div>
   );
