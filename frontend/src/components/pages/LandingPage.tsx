@@ -106,14 +106,14 @@ export default function LandingPage() {
           <figure className="mt-10">
             <blockquote className="text-center text-xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9">
               <p>
-                &quot;From the moment I discovered P2P Lending, my financial
+                &quot;From the moment I discovered Loan Connect, my financial
                 journey has been transformed. The platform provided me with easy
                 access to loans at competitive rates, and the process was
                 seamless. The support team was responsive and helpful,
-                addressing all my queries promptly. Thanks to P2P Lending, I was
-                able to achieve my financial goals faster than I ever imagined.
-                I highly recommend their services to anyone looking for a
-                hassle-free lending experience.&quot;
+                addressing all my queries promptly. Thanks to Loan Connect, I
+                was able to achieve my financial goals faster than I ever
+                imagined. I highly recommend their services to anyone looking
+                for a hassle-free lending experience.&quot;
               </p>
             </blockquote>
             <figcaption className="mt-10">
