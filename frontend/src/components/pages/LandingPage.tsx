@@ -1,6 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Logo from "../../../public/images/loan-connect-logo.png";
 import GirlsImage from "../../../public/images/landing-page-image.png";
+import JamesAndSonsLogo from "../../../public/images/james-and-sons.png";
 
 const stats = [
   { id: 1, name: "Transactions every 24 hours", value: "44 million" },
@@ -11,7 +13,7 @@ const stats = [
 export default function LandingPage() {
   return (
     <div className="">
-      <div className="container mx-auto flex flex-col items-center justify-center px-4">
+      <section className="container mx-auto flex flex-col items-center justify-center px-4">
         <h1 className="text-5xl text-center font-extrabold mb-8 leading-tight">
           Loan Connect <br />{" "}
           <p className="text-3xl">Peer-to-Peer Lending Made Easy</p>
@@ -28,15 +30,19 @@ export default function LandingPage() {
           traditional financial institutions.
         </p>
         <div className="flex justify-center mb-10">
-          <button className="bg-green-500 text-white hover:bg-white hover:text-gray-800 font-bold py-3 px-6 rounded-lg mr-4">
-            Create Account now
-          </button>
-          <button className="bg-gray-800 50border-2 border-white text-white font-bold py-3 px-6 rounded-lg hover:bg-white hover:text-gray-800">
-            Log into your account
-          </button>
+          <Link to="/register">
+            <button className="bg-green-500 text-white hover:bg-white hover:text-gray-800 font-bold py-3 px-6 rounded-lg mr-4">
+              Get started!
+            </button>
+          </Link>
+          <Link to="login">
+            <button className="bg-gray-800 50border-2 border-white text-white font-bold py-3 px-6 rounded-lg hover:bg-white hover:text-gray-800">
+              Log into your account
+            </button>
+          </Link>
         </div>
-      </div>
-      <div className="bg-white text-gray-800 py-8 rounded-lg flex:col lg:flex">
+      </section>
+      <section className="bg-white text-gray-800 py-8 rounded-lg flex:col lg:flex">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold mb-4">Why do you need it?</h2>
 
@@ -65,11 +71,11 @@ export default function LandingPage() {
           <img
             className="mx-auto object-cover w-auto"
             src={GirlsImage}
-            alt="loan connect logo"
+            alt="girls with money"
           />
         </div>
-      </div>
-      <div className="bg-inherit sm:py-16">
+      </section>
+      <section className="bg-inherit py-16">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <dl className="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
             {stats.map((stat) => (
@@ -87,7 +93,54 @@ export default function LandingPage() {
             ))}
           </dl>
         </div>
-      </div>
+      </section>
+      <section className="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:px-8">
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(45rem_50rem_at_top,theme(colors.indigo.100),white)] opacity-20" />
+        <div className="absolute inset-y-0 right-1/2 -z-10 mr-16 w-[200%] origin-bottom-left skew-x-[-30deg] bg-white shadow-xl shadow-indigo-600/10 ring-1 ring-indigo-50 sm:mr-28 lg:mr-0 xl:mr-16 xl:origin-center" />
+        <div className="mx-auto max-w-2xl lg:max-w-4xl">
+          <img
+            className="mx-auto h-20"
+            src={JamesAndSonsLogo}
+            alt="business image"
+          />
+          <figure className="mt-10">
+            <blockquote className="text-center text-xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9">
+              <p>
+                &quot;From the moment I discovered P2P Lending, my financial
+                journey has been transformed. The platform provided me with easy
+                access to loans at competitive rates, and the process was
+                seamless. The support team was responsive and helpful,
+                addressing all my queries promptly. Thanks to P2P Lending, I was
+                able to achieve my financial goals faster than I ever imagined.
+                I highly recommend their services to anyone looking for a
+                hassle-free lending experience.&quot;
+              </p>
+            </blockquote>
+            <figcaption className="mt-10">
+              <img
+                className="mx-auto h-10 w-10 rounded-full"
+                src="https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/518.jpg"
+                alt=""
+              />
+              <div className="mt-4 flex items-center justify-center space-x-3 text-base">
+                <div className="font-semibold text-gray-900">
+                  Julian Schneider
+                </div>
+                <svg
+                  viewBox="0 0 2 2"
+                  width={3}
+                  height={3}
+                  aria-hidden="true"
+                  className="fill-gray-900"
+                >
+                  <circle cx={1} cy={1} r={1} />
+                </svg>
+                <div className="text-gray-600">CEO of James and Sons</div>
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
     </div>
   );
 }

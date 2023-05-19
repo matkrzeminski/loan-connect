@@ -1,6 +1,6 @@
 import React from "react";
-import Header from "../molecules/Header";
-import Footer from "../molecules/Footer";
+import Header from "./Header";
+import Footer from "./Footer";
 
 interface IProps {
   children: React.ReactNode;
@@ -19,6 +19,8 @@ export default function BaseLayout({ children, currentLocation }: IProps) {
     { key: "/", displayName: "Home" },
     { key: "/loans-list", displayName: "Loans List" },
     { key: "/your-loans", displayName: "Your Loans" },
+    { key: "/login", displayName: "Log into your account" },
+    { key: "/register", displayName: "Create New Account" },
   ];
 
   const displayPageName = () => {

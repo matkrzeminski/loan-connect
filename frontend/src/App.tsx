@@ -1,11 +1,11 @@
 import React from "react";
 import { useLocation, Routes, Route } from "react-router-dom";
-import BaseLayout from "./components/organisms/BaseLayout";
-import List from "./components/molecules/List";
+import BaseLayout from "./components/BaseLayout";
+import List from "./components/pages/List";
 import RegisterPage from "./components/pages/RegisterPage";
 import LandingPage from "./components/pages/LandingPage";
 import LoginPage from "./components/pages/LoginPage";
-import NoPageFound from "./components/molecules/NoPageFound";
+import NoPageFound from "./components/NoPageFound";
 
 function App(): JSX.Element {
   const location = useLocation();

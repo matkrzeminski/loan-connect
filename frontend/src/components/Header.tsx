@@ -3,7 +3,7 @@ import { Fragment } from "react";
 import { Link } from "react-router-dom";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
-import Logo from "../../../public/images/loan-connect-logo.png";
+import Logo from "../../public/images/loan-connect-logo.png";
 
 interface IProps {
   location: string;
@@ -39,7 +39,13 @@ export default function Header({ location }: IProps) {
             <div className="flex h-16 items-center justify-between">
               <div className="flex items-center">
                 <div className="flex-shrink-0">
-                  <img className="h-8 w-8" src={Logo} alt="loan connect logo" />
+                  <Link to="/">
+                    <img
+                      className="h-8 w-8"
+                      src={Logo}
+                      alt="loan connect logo"
+                    />
+                  </Link>
                 </div>
                 <div className="hidden md:block">
                   <div className="ml-10 flex items-baseline space-x-4">
