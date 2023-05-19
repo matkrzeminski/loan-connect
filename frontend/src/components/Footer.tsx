@@ -17,6 +17,22 @@ export default function Footer() {
               Landing Page Image by drobotdean on Freepik
             </a>
           </p>
+          <p className="text-xs text-gray-400 md:text-sm text-center">
+            <a
+              href="https://github.com/pigment/fake-logos"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              James and Sons logo taken from github: pigment/fake-logos&nbsp;
+            </a>
+            <a
+              href="https://creativecommons.org/licenses/by-sa/4.0/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              on Creative Commons Attribution-Share Alike
+            </a>
+          </p>
         </div>
       </div>
     </footer>
