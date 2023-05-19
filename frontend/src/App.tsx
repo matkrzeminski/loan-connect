@@ -7,6 +7,7 @@ import List from "./components/molecules/List";
 import RegisterPage from "./components/pages/RegisterPage";
 import LandingPage from "./components/pages/LandingPage";
 import LoginPage from "./components/pages/LoginPage";
+import NoPageFound from "./components/molecules/NoPageFound";
 
 function App(): JSX.Element {
   return (
@@ -17,17 +18,7 @@ function App(): JSX.Element {
           <Route path="/loans-list" element={<List />} />
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/login" element={<LoginPage />} />
-          <Route path="*" element={<div>404</div>} />
-          {/* </Route>
-          <Route path="/loans-list">
-            <List />
-          </Route>
-          <Route path="/register">
-            <RegisterPage />
-          </Route>
-          <Route path="/register">
-            <LoginPage />
-          </Route> */}
+          <Route path="*" element={<NoPageFound />} />
         </Routes>
       </BaseLayout>
     </div>
