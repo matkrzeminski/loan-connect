@@ -21,3 +21,15 @@ services:
       - ./backend:/backend
     env_file:
       - .env
+  frontend:
+    build:
+      context: frontend
+      dockerfile: Dockerfile
+    ports:
+      - ${FRONTEND_PORT}:${FRONTEND_PORT}
+    depends_on:
+      - backend
+    volumes:
+      - ./frontend:/app
+    env_file:
+      - .env

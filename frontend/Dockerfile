@@ -1,6 +1,6 @@
 FROM node:14-alpine
 
-WORKDIR /
+WORKDIR /app
 
 COPY package*.json ./
 
@@ -12,4 +12,4 @@ RUN npm run build
 
 EXPOSE 5173
 
-CMD ["npm", "start"]
+CMD ["npm", "run", "dev"]
