@@ -6,6 +6,8 @@ import RegisterPage from "./components/pages/RegisterPage";
 import LandingPage from "./components/pages/LandingPage";
 import LoginPage from "./components/pages/LoginPage";
 import NoPageFound from "./components/NoPageFound";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App(): JSX.Element {
   const location = useLocation();
@@ -20,6 +22,7 @@ function App(): JSX.Element {
           <Route path="/login" element={<LoginPage />} />
           <Route path="*" element={<NoPageFound />} />
         </Routes>
+        <ToastContainer position="bottom-right" autoClose={1500} closeOnClick />
       </BaseLayout>
     </div>
   );

@@ -1,5 +1,7 @@
 import React from "react";
 import ListItem from "../ListItem";
+import store from "../../redux/store";
+import RequireAuth from "../auth/RequireAuth";
 
 const people = [
   "Loan for a Car",
@@ -15,11 +17,15 @@ const people = [
 ];
 
 export default function List() {
+  console.log(store.getState().user);
+
   return (
-    <>
-      {people.map((item) => {
-        return <ListItem key={item} title={item} />;
-      })}
-    </>
+    <RequireAuth>
+      <>
+        {people.map((item) => {
+          return <ListItem key={item} title={item} />;
+        })}
+      </>
+    </RequireAuth>
   );
 }

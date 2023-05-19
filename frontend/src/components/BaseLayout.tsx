@@ -13,8 +13,6 @@ interface IAvailableLocations {
 }
 
 export default function BaseLayout({ children, currentLocation }: IProps) {
-  console.log(currentLocation);
-
   const availableLocations: IAvailableLocations[] = [
     { key: "/", displayName: "Home" },
     { key: "/loans-list", displayName: "Loans List" },

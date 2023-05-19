@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --toastify-color-info: #1f2937 !important;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
