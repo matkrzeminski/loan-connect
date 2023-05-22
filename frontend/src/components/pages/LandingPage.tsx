@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import Logo from "../../../public/images/loan-connect-logo.png";
 import GirlsImage from "../../../public/images/landing-page-image.png";
 import JamesAndSonsLogo from "../../../public/images/james-and-sons.png";
+import { useSelector } from "react-redux";
+import { RootState } from "../../redux/store";
 
 const stats = [
   { id: 1, name: "Transactions every 24 hours", value: "44 million" },
@@ -11,6 +13,10 @@ const stats = [
 ];
 
 export default function LandingPage() {
+  const isAuthenticated = useSelector(
+    (state: RootState) => state.user.isLoggedIn
+  );
+
   return (
     <div className="">
       <section className="container mx-auto flex flex-col items-center justify-center px-4">
@@ -30,16 +36,20 @@ export default function LandingPage() {
           traditional financial institutions.
         </p>
         <div className="flex justify-center mb-10">
-          <Link to="/register">
-            <button className="bg-green-500 text-white hover:bg-white hover:text-gray-800 font-bold py-3 px-6 rounded-lg mr-4">
-              Get started!
-            </button>
-          </Link>
-          <Link to="login">
-            <button className="bg-gray-800 50border-2 border-white text-white font-bold py-3 px-6 rounded-lg hover:bg-white hover:text-gray-800">
-              Log into your account
-            </button>
-          </Link>
+          {!isAuthenticated && (
+            <>
+              <Link to="/register">
+                <button className="bg-green-500 text-white hover:bg-white hover:text-gray-800 font-bold py-3 px-6 rounded-lg mr-4">
+                  Get started!
+                </button>
+              </Link>
+              <Link to="login">
+                <button className="bg-gray-800 50border-2 border-white text-white font-bold py-3 px-6 rounded-lg hover:bg-white hover:text-gray-800">
+                  Log into your account
+                </button>
+              </Link>
+            </>
+          )}
         </div>
       </section>
       <section className="bg-white text-gray-800 py-8 rounded-lg flex:col lg:flex">

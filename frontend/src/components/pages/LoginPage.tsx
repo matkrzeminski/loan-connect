@@ -30,7 +30,6 @@ const LoginPage = () => {
 
   const handleSubmit = (values: typeof initialValues) => {
     console.log(values);
-    // dispatch(login());
 
     if (
       values.email === "mikolaj.cieszczyk@gmail.com" &&

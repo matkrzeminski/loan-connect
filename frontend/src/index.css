@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 :root {
-  --toastify-color-info: #1f2937 !important;
+  --toastify-color-info: #4f46e5 !important;
 }
 
 body {
