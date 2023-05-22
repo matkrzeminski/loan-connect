@@ -1,6 +1,5 @@
 import React from "react";
 import ListItem from "../ListItem";
-import store from "../../redux/store";
 import RequireAuth from "../auth/RequireAuth";
 
 const people = [
@@ -17,8 +16,6 @@ const people = [
 ];
 
 export default function List() {
-  console.log(store.getState().user);
-
   return (
     <RequireAuth>
       <>
