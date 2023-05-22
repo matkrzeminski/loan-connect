@@ -14,5 +14,5 @@ $ pre-commit install
 ```
 ### To generate a secret key, please run the following command:
 ```
-# openssl rand -hex 32
+$ openssl rand -hex 32
 ```
