@@ -32,6 +32,13 @@ def client(session: TestSessionLocal) -> TestClient:
     yield TestClient(app)
 
 
+@pytest.fixture(autouse=True)
+def cleanup():
+    yield
+    TestSessionLocal.remove()
+    engine.dispose()
+
+
 @pytest.fixture()
 def user() -> Callable[[Dict[str, Any]], User]:
     def _create_user(**kwargs):
