@@ -44,9 +44,6 @@ const RegisterPage = () => {
           src={Logo}
           alt="loan connect logo"
         />
-        <h1 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
-          Loan Connect
-        </h1>
 
         <h3 className="mt-10 text-center text-xl font-bold leading-9 tracking-tight text-gray-900">
           Create an account

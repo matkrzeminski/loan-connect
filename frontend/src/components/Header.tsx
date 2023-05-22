@@ -1,10 +1,15 @@
 import React from "react";
 import { Fragment } from "react";
+import { Link } from "react-router-dom";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
-import Logo from "../../../public/images/loan-connect-logo.png";
+import Logo from "../../public/images/loan-connect-logo.png";
 
-export default function Header() {
+interface IProps {
+  location: string;
+}
+
+export default function Header({ location }: IProps) {
   const user = {
     name: "Tom Cook",
     email: "tom@example.com",
@@ -12,10 +17,9 @@ export default function Header() {
       "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
   };
   const navigation = [
-    { name: "Home", href: "#", current: true },
-    { name: "Loans list", href: "#", current: false },
-    { name: "Your Loans", href: "#", current: false },
-    { name: "About", href: "#", current: false },
+    { name: "Home", href: "/" },
+    { name: "Loans list", href: "/loans-list", current: false },
+    { name: "Your Loans", href: "/your-loans", current: false },
   ];
   const userNavigation = [
     { name: "Your Profile", href: "#" },
@@ -35,24 +39,32 @@ export default function Header() {
             <div className="flex h-16 items-center justify-between">
               <div className="flex items-center">
                 <div className="flex-shrink-0">
-                  <img className="h-8 w-8" src={Logo} alt="loan connect logo" />
+                  <Link to="/">
+                    <img
+                      className="h-8 w-8"
+                      src={Logo}
+                      alt="loan connect logo"
+                    />
+                  </Link>
                 </div>
                 <div className="hidden md:block">
                   <div className="ml-10 flex items-baseline space-x-4">
                     {navigation.map((item) => (
-                      <a
+                      <Link
                         key={item.name}
-                        href={item.href}
+                        to={item.href}
                         className={classNames(
-                          item.current
+                          item.href === location
                             ? "bg-gray-900 text-white"
                             : "text-gray-300 hover:bg-gray-700 hover:text-white",
                           "rounded-md px-3 py-2 text-sm font-bold"
                         )}
-                        aria-current={item.current ? "page" : undefined}
+                        aria-current={
+                          item.href === location ? "page" : undefined
+                        }
                       >
                         {item.name}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </div>
